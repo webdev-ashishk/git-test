@@ -48,5 +48,7 @@ servicesbtn.addEventListener("click", () => {
   homeContent.style.display = "none";
   aboutContent.style.display = "none";
   servicesContent.style.display = "block";
+  servicesContent.style.color = "blue";
+  servicesContent.style.fontSize = "1.2rem";
   contactContent.style.display = "none";
 });
