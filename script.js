@@ -50,5 +50,6 @@ servicesbtn.addEventListener("click", () => {
   servicesContent.style.display = "block";
   servicesContent.style.color = "blue";
   servicesContent.style.fontSize = "1.2rem";
+  servicesContent.style.backgroundColor = "lightgray";
   contactContent.style.display = "none";
 });
