@@ -4,91 +4,17 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>test-DOM</title>
+    <title>Blog</title>
 
-    <style>
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-      h1 {
-        text-align: center;
-      }
-      #navbar {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        background-color: #333;
-      }
-
-      #navbar ul {
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-        overflow: hidden;
-      }
-
-      #navbar li {
-        float: left;
-      }
-
-      #navbar li a {
-        display: block;
-        color: white;
-        text-align: center;
-        padding: 14px 16px;
-        text-decoration: none;
-      }
-
-      #navbar li a:hover {
-        background-color: #111;
-      }
-      #home {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        text-align: center;
-        background-color: #262626;
-        color: lightgreen;
-        /* display: none; */
-      }
-      #about {
-        display: none;
-        margin-top: 20px;
-        padding: 20px;
-      }
-      a:active {
-        background-color: #333;
-        color: green;
-      }
-      a:visited {
-        color: purple;
-      }
-      #services {
-        display: none;
-        margin-top: 20px;
-        padding: 20px;
-      }
-      #contact {
-        display: none;
-        margin-top: 20px;
-        padding: 20px;
-        background-color: #262626;
-        color: white;
-        font-size: 1.2rem;
-      }
-    </style>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <nav id="navbar">
       <ul>
-        <li><a href="#" id="homebtn">Home</a></li>
-        <li><a href="#" id="aboutbtn">About</a></li>
-        <li><a href="#" id="servicesbtn">Services</a></li>
-        <li><a href="#" id="contactbtn">Contact</a></li>
+        <li><a class="active" href="#" id="homebtn">Home</a></li>
+        <li><a class="active" href="#" id="aboutbtn">About</a></li>
+        <li><a class="active" href="#" id="servicesbtn">Services</a></li>
+        <li><a class="active" href="#" id="contactbtn">Contact</a></li>
       </ul>
     </nav>
     <div id="home">
