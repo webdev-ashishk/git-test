@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>test-DOM</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      #navbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: #333;
+      }
+
+      #navbar ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+      }
+
+      #navbar li {
+        float: left;
+      }
+
+      #navbar li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+      }
+
+      #navbar li a:hover {
+        background-color: #111;
+      }
+      #home {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        text-align: center;
+        background-color: #262626;
+        color: lightgreen;
+      }
+      #about {
+        display: none;
+        margin-top: 20px;
+        padding: 20px;
+      }
+      #service {
+        display: none;
+        margin-top: 20px;
+        padding: 20px;
+      }
+      #contact {
+        display: none;
+        margin-top: 20px;
+        padding: 20px;
+        background-color: #262626;
+        color: white;
+        font-size: 1.2rem;
+      }
+    </style>
+  </head>
+  <body>
+    <nav id="navbar">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#" id="contactbtn">Contact</a></li>
+      </ul>
+    </nav>
+    <div id="home">
+      <h1>Welcome to the Awesome Place!</h1>
+    </div>
+    <div id="contact">
+      <h1>This is contect Form</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto
+        voluptates aspernatur assumenda tenetur autem! Odio molestias, delectus
+        possimus voluptatibus ratione, eligendi pariatur saepe ducimus dolorem
+        quas culpa nihil. Explicabo dolore aliquam dicta quas incidunt quia
+        numquam maxime corporis, nisi facere ipsa consequuntur veritatis
+        blanditiis libero a reprehenderit voluptatibus rem autem perspiciatis,
+        temporibus delectus dolor sint minima architecto? Incidunt, mollitia
+        libero! Dolor, incidunt, iusto quibusdam odit itaque dolores laudantium
+        alias dignissimos iste rem non minima sit molestias enim tempora vitae
+        quasi. Neque sit ad perferendis adipisci possimus architecto repellat
+        saepe quis earum nemo aliquam eveniet harum tempore vel veniam, rem
+        quibusdam quae necessitatibus placeat id? Eum dolorem iste reprehenderit
+        vitae consectetur, non dolores explicabo aliquid voluptatem blanditiis
+        facilis fuga mollitia totam quod nostrum officiis nam ab excepturi.
+        Incidunt animi veniam veritatis accusamus dolorem! Autem libero
+        voluptatem nostrum sint pariatur mollitia quos in adipisci sunt?
+        Mollitia nemo voluptatem modi aperiam ratione eos debitis accusantium
+        doloremque. Error tenetur, quae nisi numquam accusamus, minus architecto
+        hic sunt nesciunt doloribus excepturi perferendis id harum maiores optio
+        ipsum aperiam ullam accusantium expedita nihil aspernatur minima
+        consequatur nobis voluptas! Accusantium nam facilis officiis amet error
+        neque, quas architecto soluta recusandae beatae nesciunt nihil, vero
+        praesentium illo omnis?
+      </p>
+    </div>
+    <div id="service">
+      <h1>This is service Form</h1>
+      <p>
+        liquam dicta quas incidunt quia numquam maxime corporis, nisi facere
+        ipsa consequuntur veritatis blanditiis libero a reprehenderit
+        voluptatibus rem autem perspiciatis, temporibus delectus dolor sint
+        adipisci possimus voluptatem blanditiis facilis fuga mollitia totam quod
+        nostrum officiis nam ab excepturi. Incidunt animi veniam veritatis
+        accusamus dolorem! Autem libero voluptatem nostrum sint pariatur
+        mollitia quos in adipisci sunt? Mollitia nemo voluptatem modi aperiam
+        ratione eos debitis accusantium doloremque. Error tenetur, quae nisi
+        numquam accusamus, minus architecto hic sunt nesciunt doloribus
+        excepturi perferendis id harum maiores optio ipsum aperiam ullam
+        accusantium expedita nihil aspernatur minima consequatur nobis voluptas!
+        Accusantium nam facilis officiis amet error neque, quas architecto
+        soluta recusandae beatae nesciunt nihil, vero praesentium illo omnis?
+      </p>
+    </div>
+    <div id="about">
+      <h1>This is about Form</h1>
+      <p>
+        liquam dicta quas incidunt quia numquam maxime corporis, nisi facere
+        ipsa consequuntur veritatis blanditiis libero a reprehenderit
+        voluptatibus rem autem perspiciatis, temporibus delectus dolor sint
+        adipisci possimus voluptatem blanditiis facilis fuga mollitia totam quod
+        nostrum officiis nam ab excepturi. Incidunt animi veniam veritatis
+        accusamus dolorem! Autem libero voluptatem nostrum sint pariatur
+        mollitia quos in adipisci sunt? Mollitia nemo voluptatem modi aperiam
+        ratione eos debitis accusantium doloremque. Error tenetur, quae nisi
+        numquam accusamus, minus architecto hic sunt nesciunt doloribus
+        excepturi perferendis id harum maiores optio ipsum aperiam ullam
+        accusantium expedita nihil aspernatur minima consequatur nobis voluptas!
+        Accusantium nam facilis officiis amet error neque, quas architecto
+        soluta recusandae beatae nesciunt nihil, vero praesentium illo omnis?
+      </p>
+    </div>
+    <script>
+      var navbar = document.getElementById("navbar");
+
+      window.onscroll = function () {
+        if (window.pageYOffset > 0) {
+          navbar.classList.add("sticky");
+        } else {
+          navbar.classList.remove("sticky");
+        }
+      };
+      const contactbtn = document.getElementById("contactbtn");
+      contactbtn.addEventListener("click", () => {
+        const contact = document.getElementById("contact");
+        const home = document.getElementById("home");
+        home.style.display = "none";
+        contact.style.display = "block";
+      });
+    </script>
+  </body>
+</html>
